@@ -28,8 +28,7 @@ class CategoryResponse(BaseModel):
     id: int
     name: str
     
-    tasks: list[TaskShortResponse]
-    
+    tasks: list[TaskShortResponse] | None = []    
     class Config:
         from_attributes = True
 class TaskResponse(BaseModel):
