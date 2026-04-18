@@ -106,6 +106,9 @@ GitHub: https://github.com/DemarevMaxim
 
 # 📂 Структура проекта
 
+
+```
+
 task-manager-api/
 ├── alembic/
 │   ├── versions/          # Миграции базы данных
