@@ -103,23 +103,27 @@ GitHub: https://github.com/DemarevMaxim
 # 📂 Структура проекта
 
 task-manager-api/
-
-├── alembic/  
-│   └── versions/  
-
-├── app/  
-│   ├── models.py  
-│   ├── schemas.py  
-│   ├── database.py  
-│   ├── auth.py  
-│   ├── crud.py  
-│   ├── routers/  
-│   │   ├── users.py  
-│   │   ├── tasks.py  
-│   │   └── categories.py  
-│   └── main.py  
-
-├── Dockerfile  
-├── docker-compose.yaml  
-├── requirements.txt  
-├── README.md  
+├── alembic/
+│   ├── versions/          # Миграции базы данных
+│   └── alembic.ini        # Конфигурация Alembic
+│
+├── app/
+│   ├── routers/           # Роутеры API
+│   │   ├── users.py
+│   │   ├── tasks.py
+│   │   └── categories.py
+│   │
+│   ├── models.py          # SQLAlchemy модели
+│   ├── schemas.py         # Pydantic схемы
+│   ├── database.py        # Подключение к БД
+│   ├── auth.py            # JWT авторизация
+│   ├── crud.py            # CRUD логика
+│   └── main.py            # Точка входа FastAPI
+│
+├── Dockerfile             # Docker образ
+├── docker-compose.yaml    # Docker сервисы
+├── requirements.txt       # Зависимости Python
+├── .env.example           # Пример переменных окружения
+├── .gitignore             # Игнорируемые файлы
+├── swagger-task-manager.png # Скрин Swagger UI
+└── README.md              # Документация проекта
